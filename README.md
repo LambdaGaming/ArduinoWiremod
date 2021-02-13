@@ -2,7 +2,8 @@
  Tool for Wiremod that allows users to connect their physical Arduino to the addon. Please note that this addon is experimental and is not intended to be used like the normal Wiremod tools. Also, it probably goes without saying but this only provides you with the virtual half. You will obviously need a physical Arduino and at least a small amount of C++ experience in order to do anything with this addon.
 
 # Requirements
- - You will need my Arduino Gmod Interface module for this addon to work. You can download it [here.](https://github.com/LambdaGaming/ArduinoGmodInterface)
+ - Wiremod, which can be downloaded [here.](https://steamcommunity.com/sharedfiles/filedetails/?id=160250458)
+ - My Arduino Gmod Interface module, which can be downloaded [here.](https://github.com/LambdaGaming/ArduinoGmodInterface)
  - A physical Arduino and at least a small amount of C++ experience, as stated above.
 
 # How To Use
