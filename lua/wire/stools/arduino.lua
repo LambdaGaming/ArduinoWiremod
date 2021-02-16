@@ -4,10 +4,7 @@ WireToolSetup.open( "arduino", "Arduino", "gmod_wire_arduino", nil, "Arduino" )
 if CLIENT then
 	language.Add( "tool.wire_arduino.name", "Arduino Microcontroller" )
 	language.Add( "tool.wire_arduino.desc", "Transmits to and receives data from a real Arduino." )
-
-	TOOL.Information = {
-		{ name = "left", text = "Spawn Arduino." }
-	}
+	language.Add( "tool.wire_arduino.left", "Spawn Arduino." )
 
 	WireToolSetup.setToolMenuIcon( "icon16/wrench.png" )
 end

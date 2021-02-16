@@ -34,7 +34,7 @@ if SERVER then
 			self:UpdateOverlay()
 		else
 			if self.Enabled then
-				arduino.WriteString( self.Instance, tostring( value ) )
+				self.Instance:WriteString( tostring( value ) )
 			end
 		end
 	end
@@ -42,7 +42,7 @@ if SERVER then
 	function ENT:ProcessOutput()
 		timer.Create( "ArduinoTimer"..self:EntIndex(), 0.01, 0, function()
 			if self.Enabled then
-				local str = arduino.ReadString( self.Instance )
+				local str = self.Instance:ReadString()
 				if self.NumFix then str = tonumber( str ) end --Optional number conversion since the module only supports strings
 				Wire_TriggerOutput( self, "Data Output", tonumber( str ) )
 			end
@@ -51,7 +51,7 @@ if SERVER then
 
 	function ENT:OnRemove()
 		timer.Remove( "ArduinoTimer"..self:EntIndex() )
-		arduino.Close( self.Instance )
+		self.Instance:Close()
 	end
 end
 
