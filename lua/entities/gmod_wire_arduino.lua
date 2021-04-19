@@ -10,7 +10,7 @@ if SERVER then
 		self:PhysicsInit( SOLID_VPHYSICS )
 		self:SetUseType( SIMPLE_USE )
 
-		self.Inputs = Wire_CreateInputs( self, { "Enabled", "Data Input" } )
+		self.Inputs = Wire_CreateInputs( self, { "Enabled", "Data Input 1", "Data Input 2 [STRING]" } )
 		self.Outputs = Wire_CreateOutputs( self, { "Data Output" } )
 	end
 
