@@ -37,7 +37,9 @@ TOOL.ClientConVar = {
 	StartEnabled = 1,
 	Port = "COM3",
 	model = "models/bull/gates/microcontroller2.mdl",
-	NumFix = 0
+	NumFix = 0,
+	InputDelay = 0,
+	OutputDelay = 0
 }
 
 function TOOL.BuildCPanel( panel )

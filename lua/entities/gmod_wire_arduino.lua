@@ -19,15 +19,17 @@ if SERVER then
 		self.Enabled = tobool( enabled )
 		self.Port = port
 		self.NumFix = tobool( numfix )
-		self:UpdateOverlay()
-		self:ProcessOutput()
 		self.Instance:SetInputDelay( inputdelay )
 		self.Instance:SetOutputDelay( outputdelay )
+		self.InputDelay = inputdelay
+		self.OutputDelay = outputdelay
+		self:UpdateOverlay()
+		self:ProcessOutput()
 	end
 
 	function ENT:UpdateOverlay()
 		local enabled = self.Enabled and "Enabled" or "Disabled"
-		self:SetOverlayText( "Status: "..enabled.."\nSerial Port: "..self.Port )
+		self:SetOverlayText( "Status: "..enabled.."\nSerial Port: "..self.Port.."\nInput Delay: "..self.InputDelay.."\nOutput Delay: "..self.OutputDelay )
 	end
 	
 	function ENT:TriggerInput( iname, value )
@@ -57,4 +59,4 @@ if SERVER then
 	end
 end
 
-duplicator.RegisterEntityClass( "gmod_wire_arduino", WireLib.MakeWireEnt, "Data", "StartEnabled", "Port", "model", "NumFix" )
+duplicator.RegisterEntityClass( "gmod_wire_arduino", WireLib.MakeWireEnt, "Data", "StartEnabled", "Port", "model", "NumFix", "InputDelay", "OutputDelay" )
