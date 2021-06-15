@@ -14,13 +14,15 @@ if SERVER then
 		self.Outputs = Wire_CreateOutputs( self, { "Data Output" } )
 	end
 
-	function ENT:Setup( enabled, port, model, numfix )
+	function ENT:Setup( enabled, port, model, numfix, inputdelay, outputdelay )
 		self.Instance = arduino.Begin( port )
 		self.Enabled = tobool( enabled )
 		self.Port = port
 		self.NumFix = tobool( numfix )
 		self:UpdateOverlay()
 		self:ProcessOutput()
+		self.Instance:SetInputDelay( inputdelay )
+		self.Instance:SetOutputDelay( outputdelay )
 	end
 
 	function ENT:UpdateOverlay()

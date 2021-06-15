@@ -12,7 +12,7 @@ WireToolSetup.SetupMax( 5 )
 
 if SERVER then
 	function TOOL:GetConVars()
-		return self:GetClientNumber( "StartEnabled" ), self:GetClientInfo( "Port" ), self:GetClientInfo( "model" ), self:GetClientNumber( "NumFix" )
+		return self:GetClientNumber( "StartEnabled" ), self:GetClientInfo( "Port" ), self:GetClientInfo( "model" ), self:GetClientNumber( "NumFix" ), self:GetClientNumber( "InputDelay" ), self:GetClientNumber( "OutputDelay" )
 	end
 
 	function TOOL:LeftClick_PostMake( ent, ply, trace )
@@ -45,5 +45,7 @@ function TOOL.BuildCPanel( panel )
 	panel:CheckBox( "Start Enabled", "wire_arduino_StartEnabled" )
 	panel:CheckBox( "Convert Inputs To Numbers", "wire_arduino_NumFix" )
 	panel:TextEntry( "Serial Port Name", "wire_arduino_Port" )
+	panel:NumSlider( "Input Delay", "wire_arduino_InputDelay", 0, 600 )
+	panel:NumSlider( "Output Delay", "wire_arduino_OutputDelay", 0, 600 )
 	WireDermaExts.ModelSelect( panel, "wire_arduino_model", list.Get( "Wire_gate_Models" ), 2 )
 end
