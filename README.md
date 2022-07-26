@@ -1,5 +1,5 @@
 # Arduino Tool For Wiremod
- Tool for Wiremod that allows users to connect their physical Arduino to the addon. Please note that this addon is experimental and is not intended to be used like the normal Wiremod tools. Also, it probably goes without saying but this only provides you with the virtual half. You will obviously need a physical Arduino and at least a small amount of C++ experience in order to do anything with this addon.
+ (No longer in development.) Tool for Wiremod that allows users to connect their physical Arduino to the addon. Please note that this addon is experimental and is not intended to be used like the normal Wiremod tools. Also, it probably goes without saying but this only provides you with the virtual half. You will obviously need a physical Arduino and at least a small amount of C++ experience in order to do anything with this addon.
 
 # Requirements
  - Wiremod, which can be downloaded [here.](https://steamcommunity.com/sharedfiles/filedetails/?id=160250458)
@@ -16,4 +16,4 @@
  Once you spawn it in, you can get to work connecting things as inputs, outputs, or both depending entirely on what you want to do, and then writing code for your physical Arduino to react to those inputs/outputs.
 
 # Contributing
- - If you want to contribute, please read the [contributing guidelines](https://lambdagaming.github.io/contributing.html) before making a pull request.
+ - This project has been archived and is no longer accepting pull requests, but feel free to create your own fork.
